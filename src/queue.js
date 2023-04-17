@@ -45,7 +45,7 @@ class Queue {
   }
     // remove line with error and write your code here
   }
-}
+
 
 module.exports = {
   Queue
