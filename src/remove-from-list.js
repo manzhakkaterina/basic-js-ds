@@ -36,9 +36,9 @@ var currNode = 1;
       currNode = currNode.next;
     }
   }
-  if (currNode.value === k && currNode.next === null) {
-    prevNode.next = null
-  }
+//  if (currNode.value === k && currNode.next === null) {
+//    prevNode.next = null
+ // }
   return l;
   // remove line with error and write your code here
 }
