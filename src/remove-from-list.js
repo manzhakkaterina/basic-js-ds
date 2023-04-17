@@ -23,18 +23,20 @@ const { ListNode } = require('../extensions/list-node.js');
  * }
  */
 function removeKFromList(l, k) {
-   while (l && l.value === k) { 
-      l = l.next;
-    }
-var currNode = 1;
-  while (currNode.next) {
-    if (currNode.next.value === k) {
-      currNode.next = currNode.next.next;
-    } else { 
-      currNode = currNode.next;
+    const mas = [];
+  for (; l != null; l = l.next) {
+    if (l.value != k) {
+      mas.push(l.value);
     }
   }
-   return l;
+  let res = null;
+  mas.reverse().forEach(x => {
+    const node = new ListNode();
+    node.value = x;
+    node.next = res;
+    res = node;
+  });
+  return res;
 }
 
   // remove line with error and write your code here
